@@ -1,16 +1,21 @@
 package com.inetbanking.testcases;
 import java.io.IOException;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.inetbanking.pageobjects.Pageobject;
+import com.inetbanking.utilities.Readconfig;
 
 public class TC_Logintest_001 extends Baseclass  {
 	
-	@Test
+
+	@Test()
 	public void logintest() throws IOException
 	{
+		
+		
 		Pageobject lp=new Pageobject(driver);
 		lp.setusername(username);
 		logger.info("entered usrnme");

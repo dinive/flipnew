@@ -50,8 +50,7 @@ public class Baseclass {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	driver.get(baseurl);
 	
-		
-	}
+		}
 
 	@AfterClass
 	public void teardown() {

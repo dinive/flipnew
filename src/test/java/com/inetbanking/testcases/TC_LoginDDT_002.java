@@ -8,7 +8,6 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import com.inetbanking.pageobjects.Pageobject;
 import com.inetbanking.utilities.xlutils;
 
@@ -17,10 +16,10 @@ public class TC_LoginDDT_002 extends Baseclass
 {
 	@Test(dataProvider = "Logindata")
 
-	public void loginDDT(String uer,String pwd) throws Exception
+	public void loginDDT(String uname,String pwd) throws Exception
 	{
 		Pageobject lp=new Pageobject(driver);
-		lp.setusername(uer);
+		lp.setusername(uname);
 		logger.info("usr name given");
 		lp.setpassword(pwd);
 		logger.info("pwd name given");

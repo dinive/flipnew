@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Failed suite [Failed suite [Default suite]]]]">
   <test thread-count="5" name="Default test(failed)(failed)(failed)(failed)">
     <classes>
-      <class name="com.inetbanking.testcases.TC_Logintest_001">
+      <class name="flipkarttest.flipkarttest">
         <methods>
-          <include name="logintest"/>
-          <include name="teardown"/>
-          <include name="setup"/>
+          <include name="flipkart"/>
         </methods>
-      </class> <!-- com.inetbanking.testcases.TC_Logintest_001 -->
+      </class> <!-- flipkarttest.flipkarttest -->
     </classes>
   </test> <!-- Default test(failed)(failed)(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [Failed suite [Failed suite [Default suite]]]] -->
