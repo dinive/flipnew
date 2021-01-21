@@ -7,11 +7,11 @@
   <test thread-count="5" name="BankingApp Test(failed)(failed)">
     <parameter name="br" value="chrome"/>
     <classes>
-      <class name="flipkarttest.flipkarttest">
+      <class name="com.inetbanking.testcases.flipkarttest">
         <methods>
           <include name="flipkart"/>
         </methods>
-      </class> <!-- flipkarttest.flipkarttest -->
+      </class> <!-- com.inetbanking.testcases.flipkarttest -->
     </classes>
   </test> <!-- BankingApp Test(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [inetbankingv1]] -->

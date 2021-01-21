@@ -27,12 +27,8 @@ WebDriver ldriver;
 	@CacheLookup
 	WebElement searchbar;
 	
-
-	@FindBy(xpath="//section[4]//div[2]//div[1]//div[1]//div[1]//div[1]//label[1]//div[1]")
-	@CacheLookup
-	WebElement filterram;
 	
-	@FindBy(xpath="//div[contains(@class,'_1HmYoV _35HD7C')]//div[2]//div[1]//div[1]//div[1]//a[1]//div[1]//div[1]//div[1]//div[1]//img[1]")
+	@FindBy(xpath="//body/div[@id='container']/div[1]/div[3]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/a[1]/div[1]/div[1]/div[1]/img[1]")
 	@CacheLookup
 	WebElement phoneimage;
 	
@@ -49,10 +45,7 @@ WebDriver ldriver;
 		searchelement.sendKeys(Keys.ENTER);
 		
 	}
-		public void ramfilter() {
-			
-			filterram.click();
-		}
+		
 		
 		public void phoneselect() {
 			phoneimage.click();

@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="inetbankingv1" duration-ms="44858" started-at="2020-10-01T11:29:33Z" finished-at="2020-10-01T11:30:18Z">
+  <suite name="Default suite" duration-ms="23160" started-at="2021-01-21T17:25:02Z" finished-at="2021-01-21T17:25:26Z">
     <groups>
     </groups>
-    <test name="BankingApp Test" duration-ms="44858" started-at="2020-10-01T11:29:33Z" finished-at="2020-10-01T11:30:18Z">
+    <test name="Default test" duration-ms="23160" started-at="2021-01-21T17:25:02Z" finished-at="2021-01-21T17:25:26Z">
       <class name="com.inetbanking.testcases.flipkarttest">
-        <test-method status="PASS" signature="flipkart()[pri:0, instance:com.inetbanking.testcases.flipkarttest@5e3a8624]" name="flipkart" duration-ms="44205" started-at="2020-10-01T11:29:34Z" finished-at="2020-10-01T11:30:18Z">
+        <test-method status="PASS" signature="flipkart()[pri:0, instance:com.inetbanking.testcases.flipkarttest@42d80b78]" name="flipkart" duration-ms="23120" started-at="2021-01-21T17:25:02Z" finished-at="2021-01-21T17:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flipkart -->
       </class> <!-- com.inetbanking.testcases.flipkarttest -->
-    </test> <!-- BankingApp Test -->
-  </suite> <!-- inetbankingv1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

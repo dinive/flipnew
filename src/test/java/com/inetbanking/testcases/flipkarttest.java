@@ -27,7 +27,9 @@ public class flipkarttest {
 		Readconfig read=new Readconfig();
 		System.setProperty("webdriver.chrome.driver",read.chromepath());
 		WebDriver driver=new ChromeDriver();
+		
 		driver.get("https://www.flipkart.com/");
+		
 		logger =org.apache.log4j.Logger.getLogger("flipkart test");
 		PropertyConfigurator.configure("Log4j.properties");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -37,8 +39,7 @@ public class flipkarttest {
 	
 	gg.searchbox();
 	logger.info("searchbox");
-	gg.ramfilter();
-	logger.info("filter");
+	
 	gg.phoneselect();
 	logger.info("phoneselect");
 	Set<String> windowsid = driver.getWindowHandles();
@@ -48,5 +49,7 @@ public class flipkarttest {
 	driver.switchTo().window(childid);
 	gg.phonebuy();
 	logger.info("goes to payment page");
+	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	driver.close();
 }
 }
