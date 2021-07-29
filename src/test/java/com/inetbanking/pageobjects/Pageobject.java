@@ -13,7 +13,7 @@ public class Pageobject {
 	public Pageobject(WebDriver rdriver)
 	{
 		ldriver=rdriver;
-		PageFactory.initElements(rdriver, this);
+	
 	}
 
 

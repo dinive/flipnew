@@ -14,7 +14,7 @@ import com.inetbanking.utilities.xlutils;
 public class TC_LoginDDT_002 extends Baseclass
 
 {
-	@Test(dataProvider = "Logindata")
+	@Test(dataProvider = "logindata")
 
 	public void loginDDT(String uname,String pwd) throws Exception
 	{
@@ -25,14 +25,16 @@ public class TC_LoginDDT_002 extends Baseclass
 		logger.info("pwd name given");
 		lp.clicksubmit();
 		
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		
 		if(isAlertpresent()==true)
 		{
-			Assert.assertTrue(false);
-			logger.warn("login failed");
+		
+			
 			driver.switchTo().alert().accept(); //close alert
 			driver.switchTo().defaultContent();
+			Assert.assertTrue(false);
+			logger.warn("login failed");
 			
 		}
 		
@@ -41,8 +43,12 @@ public class TC_LoginDDT_002 extends Baseclass
 			Assert.assertTrue(true);
 			logger.info("login passed");
 			lp.clicklogout();
+			Thread.sleep(3000);
 			driver.switchTo().alert().accept();
 			driver.switchTo().defaultContent();
+			captureScreen(driver,"loginDDT");
+			Assert.assertTrue(false);
+			logger.info("login othified");
 		}
 	}
 	
@@ -59,7 +65,7 @@ public class TC_LoginDDT_002 extends Baseclass
 		}
 	}
 
-	@DataProvider(name="Logindata")
+	@DataProvider(name="logindata")
    private String [][] getData() throws IOException
    {
     String path=System.getProperty("user.dir")+"\\src\\test\\java\\com\\inetbanking\\testdata\\Logindata.xlsx";
@@ -73,7 +79,7 @@ public class TC_LoginDDT_002 extends Baseclass
     {
     	for(int j=0;j<colcount;j++)
     	{
-    		logindata[i-1][j]=xlutils.getCellData(path, "Sheet1", i, j);//1 0
+    		logindata[i-1][j]=xlutils.getCellData(path, "sheet1", i, j);//1 0
     	}
     }
 	return logindata;}}

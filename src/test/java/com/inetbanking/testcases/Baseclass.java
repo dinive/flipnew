@@ -36,24 +36,24 @@ public class Baseclass {
 			System.setProperty("webdriver.chrome.driver",read.chromepath());
 	driver=new ChromeDriver();
 		}
-		else if(br.equals("ie"))
+		else if (br.equals("fire"))
 		{
-		System.setProperty("webdriver.ie.driver",read.ie());
-     driver=new InternetExplorerDriver();
+			System.setProperty("webdriver.gecko.driver", read.getfire());
+			driver=new FirefoxDriver();
 		}
-		else if(br.equals("fire"))
+		else if (br.equals("ie"))
 		{
-		System.setProperty("webdriver.gecko.driver",read.getfire());
-     driver=new FirefoxDriver();
+			System.setProperty("webdriver.ie.driver", read.ie());
+			driver=new InternetExplorerDriver();
 		}
-		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	driver.get(baseurl);
 	
+		driver.get(baseurl);
 		}
 
+
 	@AfterClass
-	public void teardown() {
+	public void teardown() throws Exception {
+		Thread.sleep(3000);
 		driver.quit();
 	}
 	

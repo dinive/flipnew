@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [inetbankingv1]">
+  <listeners>
+    <listener class-name="com.inetbanking.utilities.Reporting"/>
+  </listeners>
+  <test thread-count="5" name="BankingApp Test(failed)">
+    <parameter name="br" value="chrome"/>
     <classes>
       <class name="com.inetbanking.testcases.flipkarttest">
         <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
           <include name="flipkart"/>
         </methods>
       </class> <!-- com.inetbanking.testcases.flipkarttest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- BankingApp Test(failed) -->
+</suite> <!-- Failed suite [inetbankingv1] -->

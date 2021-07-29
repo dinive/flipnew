@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 import com.inetbanking.pageobjects.flipkartpagedata;
 import com.inetbanking.utilities.Readconfig;
 
-public class flipkarttest {
+public class flipkarttest extends Baseclass{
 	
 	
 	public static org.apache.log4j.Logger logger;
@@ -23,10 +23,6 @@ public class flipkarttest {
 	@Test
       void flipkart() throws Exception
 {
-	
-		Readconfig read=new Readconfig();
-		System.setProperty("webdriver.chrome.driver",read.chromepath());
-		WebDriver driver=new ChromeDriver();
 		
 		driver.get("https://www.flipkart.com/");
 		
@@ -50,6 +46,6 @@ public class flipkarttest {
 	gg.phonebuy();
 	logger.info("goes to payment page");
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	driver.close();
+	driver.quit();
 }
 }

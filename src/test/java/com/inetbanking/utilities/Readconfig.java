@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class Readconfig {
 
-	Properties pro;
+	 Properties pro;
 	
 	public Readconfig() {
 		
